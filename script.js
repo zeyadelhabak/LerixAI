@@ -56,33 +56,48 @@ async function getAIResponse(message) {
     ...conversationHistory
   ];
 
-  const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${apiKey}`
-    },
-    body: JSON.stringify({
-      model: "openai/gpt-4.1",
-      messages: messages,
-      temperature: 0.7,
-      max_tokens: 1000
-    })
-  });
+  try {
+    const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${apiKey}`
+      },
+      body: JSON.stringify({
+        model: "openai/gpt-4o", // ✅ Ճիշտ մոդել
+        messages: messages,
+        temperature: 0.7,
+        max_tokens: 1000
+      })
+    });
 
-  const data = await response.json();
-  const rawText = data.choices[0].message.content.trim();
+    if (!response.ok) {
+      throw new Error(`API Error: ${response.status}`);
+    }
 
-  // Ավելացնում ենք AI-ի պատասխանը պատմությանը
-  conversationHistory.push({
-    role: "assistant",
-    content: rawText
-  });
+    const data = await response.json();
+    
+    // Ստուգում ենք՝ արդյոք պատասխանը ճիշտ է
+    if (!data.choices || !data.choices[0]) {
+      throw new Error('Invalid API response');
+    }
 
-  const formattedHTML = simpleMarkdownToHtml(rawText);
-  chatBox.innerHTML += "<p class='respons'>" + formattedHTML + "</p>";
+    const rawText = data.choices[0].message.content.trim();
 
-  return rawText;
+    conversationHistory.push({
+      role: "assistant",
+      content: rawText
+    });
+
+    const formattedHTML = simpleMarkdownToHtml(rawText);
+    chatBox.innerHTML += "<p class='respons'>" + formattedHTML + "</p>";
+
+    return rawText;
+  } catch (error) {
+    console.error('Error:', error);
+    chatBox.innerHTML += "<p class='respons' style='color: red;'>Սխալ՝ " + error.message + "</p>";
+    return null;
+  }
 }
 
 function simpleMarkdownToHtml(src) {
