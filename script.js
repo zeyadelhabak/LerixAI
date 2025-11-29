@@ -41,7 +41,7 @@ inputField.addEventListener('keydown', function (event) {
 /////////////////////////////////////////////////////////////////
 
 async function getAIResponse(message) {
-  const apiKey = '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';
+  const apiKey = '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';
 
   conversationHistory.push({
     role: "user",
