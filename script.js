@@ -57,16 +57,19 @@ async function getAIResponse(message) {
   ];
 
   try {
-const response = await fetch("http://localhost:3000/chat", {
-  method: "POST",
-  headers: { "Content-Type": "application/json" },
-  body: JSON.stringify({
-    model: "openai/gpt-4.1",
-    messages: messages,
-    temperature: 0.7,
-    max_tokens: 1000
-  })
-});
+const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${apiKey}`
+    },
+    body: JSON.stringify({
+      model: "openai/gpt-4.1",
+      messages: messages,
+      temperature: 0.7,
+      max_tokens: 1000
+    })
+  });
 
 
     if (!response.ok) {
